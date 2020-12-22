@@ -1,0 +1,551 @@
+/**
+* #.# Basics
+*
+* normalize, reset.
+*/
+@import './normalize.styl'
+@import './reset.styl'
+colourBlackLevel1 = #000000;
+colourBlackLevel2 = #484848;
+$colourBlackLevel3 = #808285;
+colourGreyLight = #f0f0f0;
+colorGrayLevel1 = #777777;
+colorGrayLevel2 = #e5e5e5;
+colorGrayLevel3 = #b3b3b3;
+colourWhite = #ffffff;
+colourBlueLight = "#8296af";
+
+roboto ='Roboto', sans-serif;
+fontSizeMobile = 20px;
+fontSizeDesktop = 16px;
+autoalignH = 0 auto;
+
+background-size()
+	-webkit-background-size arguments
+	-moz-background-size arguments
+	background-size arguments
+box-shadow()
+	-webkit-box-shadow 1px 1px 2px #585757
+	-moz-box-shadow 1px 1px 2px #585757
+	box-shadow 1px 1px 2px #585757
+flex()
+	display -ms-Flexbox
+	display -webkit-flex
+	display -moz-flex
+	display -ms-flex
+	display flex
+centrarVertical(a)
+	-webkit-box-align a
+	-webkit-align-items a
+	-moz-box-align a
+	-ms-flex-align a
+	align-items a
+flexDirection(c)
+	-webkit-flex-direction c
+	-ms-flex-direction c
+	flex-direction c
+right()
+	-webkit-box-pack justify
+	-webkit-justify-content flex-end
+	-ms-flex-pack justify
+	-moz-box-pack justify
+	justify-content flex-end
+spaceBetween()
+	-webkit-box-pack justify
+	-webkit-justify-content space-between
+	-ms-flex-pack justify
+	-moz-box-pack justify
+	justify-content space-between
+h1
+	color greenmain
+body
+	background-color colourWhite
+	font fontSizeDesktop roboto
+
+/**
+* 
+* #.# First Mobile
+* 
+*/
+.Pufi
+		position relative
+		max-width 1280px
+		margin 0 auto
+		&__Header
+			position absolute 
+			top 0
+			left 0
+			z-index 15000
+			width 100%
+			flex()
+			flexDirection(column)
+			spaceBetween()
+			align-items center
+			padding-top (20px / fontSizeMobile)rem
+			flex-wrap wrap
+			&__Logo
+				margin-left (40px / fontSizeMobile)rem
+				margin-bottom (20px / fontSizeMobile)rem
+			&__Menu
+				margin-bottom (15px / fontSizeMobile)rem
+				&__Items
+					flex()
+					flexDirection(row)
+					li
+						border-right 1px solid white
+						padding-left (17 / fontSizeMobile)rem
+						padding-right (17 / fontSizeMobile)rem
+						list-style-type none
+						a
+							color white
+							text-decoration none
+							span
+								display block
+								text-align center
+								font-size (15px / fontSizeMobile)rem
+								text-transform uppercase
+								font-weight bold
+								margin-top (10px / fontSizeMobile)rem
+							img
+								display block
+								margin-left auto
+								margin-right auto
+								width 25px
+								height auto
+					li:last-child
+						border-right 0px
+			&__User
+				flex()
+				flexDirection(row)
+				justify-content flex-end
+				padding-right (40px / fontSizeMobile)rem
+				margin-bottom (20px / fontSizeMobile)rem
+				li
+					list-style none
+					padding-left (15px / fontSizeMobile)rem
+					padding-right (15px / fontSizeMobile)rem
+					a
+						color white
+						text-transform uppercase
+						text-decoration none
+						font-size (10px / fontSizeDesktop)rem
+						i
+							margin-left (7px / fontSizeDesktop)rem
+				li:first-child
+					border-right 1px solid white
+				li:last-child
+					padding-right 0px
+		&__Content
+			&__Products
+				flex()
+				flexDirection(column)
+				flex-wrap wrap
+				&__Product
+					background-color white
+					width 100%
+					flex()
+					centrarVertical(center)
+					box-sizing border-box
+					&__Img
+						position relative
+						width 100%
+						max-height (526px / fontSizeDesktop)rem
+						img
+							width 100%
+							height auto
+					&__Info
+						margin-left auto
+						margin-right auto
+						text-align center
+						padding-top (80px / fontSizeDesktop)rem
+						padding-bottom (80px / fontSizeDesktop)rem
+						h2
+							font-size (28.28px / fontSizeDesktop)rem
+							margin-top 0
+							padding-top 0
+							padding-bottom (30px / fontSizeDesktop)rem
+						hr
+							border 1px solid colorGrayLevel1
+							width (33px / fontSizeDesktop)rem
+							margin-top 0
+							margin-bottom 0
+						p
+							font-size (13px / fontSizeDesktop)rem
+							margin-top (26px / fontSizeDesktop)rem
+							max-width (200px / fontSizeDesktop)rem
+							margin-bottom (47px / fontSizeDesktop)rem
+						a
+							font-size (12px / fontSizeDesktop)rem
+							text-decoration none
+							text-transform uppercase
+							i
+								margin-right (10px / fontSizeDesktop)rem
+			&__Gallery
+				margin-top (77px / fontSizeDesktop)rem
+				margin-bottom (83px / fontSizeDesktop)rem
+				text-transform uppercase
+				text-align center
+				p
+					font-size (12px / fontSizeDesktop)rem
+					text-transform uppercase
+					color $colourBlackLevel3
+					margin-bottom (14px / fontSizeDesktop)rem
+				h3
+					font-size (35px / fontSizeDesktop)rem
+					text-transform uppercase
+					font-weight normal
+					margin-bottom (71px / fontSizeDesktop)rem
+				&__Photos
+					width 100%
+					margin-left auto
+					margin-right auto
+					li
+						list-style none
+						display inline-block
+			&__Subscribe
+				text-align center
+				p
+					font-size (12px / fontSizeDesktop)rem
+					text-transform uppercase
+					color $colourBlackLevel3
+					margin-bottom (14px / fontSizeDesktop)rem
+				h3
+					font-size (35px / fontSizeDesktop)rem
+					margin-bottom (10px / fontSizeDesktop)rem
+					text-transform uppercase
+					font-weight normal
+				span
+					display block
+					margin-bottom (24px / fontSizeDesktop)rem
+					font-size (14px / fontSizeDesktop)rem
+				form
+					margin-bottom (100px / fontSizeDesktop)rem
+					div
+						width 90%
+						position relative
+						margin-left auto 
+						margin-right auto
+						input[type=text]
+							width 90%
+							padding (14px / fontSizeDesktop)rem (17px / fontSizeDesktop)rem (14px / fontSizeDesktop)rem (17px / fontSizeDesktop)rem
+							border 1px solid colorGrayLevel1
+							font-style italic
+						button
+							position absolute
+							left 90% !important
+							top 10px
+							z-index 15000
+							background none
+							border none
+							padding-top 8px
+		&__Footer
+			font-size (12px / fontSizeDesktop)rem
+			font-weight bold
+			color colourBlackLevel1
+			text-transform uppercase
+			padding-top (47px / fontSizeDesktop)rem
+			padding-left (40px / fontSizeDesktop)rem
+			padding-right (40px / fontSizeDesktop)rem
+			&__Shadow
+				width 100%
+				height 9px
+				background-image: url('../../img/Pufi_shadow.jpg');
+				background-repeat: repeat-x;
+			&__Site
+				flex()
+				flexDirection(column)
+				article
+					width 100%
+					margin-bottom (30px / fontSizeDesktop)rem
+					p
+						font-size (12px / fontSizeDesktop)rem
+					ul
+						width 100%
+						li
+							list-style none
+							margin-bottom (17px / fontSizeDesktop)rem
+							a
+								text-decoration none
+								color colourBlackLevel1
+				&__Legal
+					img
+						margin-top (10px / fontSizeDesktop)rem
+					&__Fiscal
+						margin-right (15px / fontSizeDesktop)rem
+				&__Social
+					ul
+						border-right 0px !important
+						li
+							list-style none
+							display inline-block
+							margin-right (8px / fontSizeDesktop)rem
+							i 
+								font-size (20px / fontSizeDesktop)rem
+			&__Brandlive
+				border-top 1px solid lightgray
+				padding-top 14px
+				padding-bottom 14px
+				flex()
+				spaceBetween()
+				margin-top (50px / fontSizeDesktop)rem
+				p
+					font-size (11px / fontSizeDesktop)rem
+					color colorGrayLevel3
+
+
+    
+
+/**
+*
+* #.# Desktop
+*
+*/
+
+@media (min-width 900px)
+	.Pufi
+		position relative
+		max-width 1280px
+		margin 0 auto
+		&__Header
+			position absolute 
+			top 0
+			left 0
+			z-index 15000
+			width 100%
+			flex()
+			flexDirection(row)
+			spaceBetween()
+			align-items flex-start
+			padding-top (40px / fontSizeDesktop)rem
+			&__Logo
+				margin-left (40px / fontSizeDesktop)rem
+			&__Menu
+				&__Items
+					flex()
+					flexDirection(row)
+					li
+						border-right 1px solid white
+						padding-left (17 / fontSizeDesktop)rem
+						padding-right (17 / fontSizeDesktop)rem
+						list-style-type none
+						a
+							color white
+							text-decoration none
+							span
+								display block
+								text-align center
+								font-size (15px / fontSizeDesktop)rem
+								text-transform uppercase
+								font-weight bold
+								margin-top (10px / fontSizeDesktop)rem
+							img
+								display block
+								margin-left auto
+								margin-right auto
+								width auto
+								height auto
+					li:last-child
+						border-right 0px
+			&__User
+				flex()
+				flexDirection(row)
+				justify-content flex-end
+				padding-right (40px / fontSizeDesktop)rem
+				li
+					list-style none
+					padding-left (15px / fontSizeDesktop)rem
+					padding-right (15px / fontSizeDesktop)rem
+					a
+						color white
+						text-transform uppercase
+						text-decoration none
+						font-size (10px / fontSizeDesktop)rem
+						i
+							margin-left (7px / fontSizeDesktop)rem
+				li:first-child
+					border-right 1px solid white
+				li:last-child
+					padding-right 0px
+		&__Content
+			&__Products
+				flex()
+				flexDirection(row)
+				flex-wrap wrap
+				&__Product
+					background-color white
+					width 50%
+					flex()
+					centrarVertical(center)
+					box-sizing border-box
+					&__Img
+						position relative
+						width 100%
+						max-height (526px / fontSizeDesktop)rem
+						img
+							width 100%
+							height auto
+					&__Info
+						margin-left auto
+						margin-right auto
+						text-align center
+						padding-top 0px
+						padding-bottom 0px
+						h2
+							font-size (28.28px / fontSizeDesktop)rem
+							margin-top 0
+							padding-top 0
+							padding-bottom (30px / fontSizeDesktop)rem
+						hr
+							border 1px solid colorGrayLevel1
+							width (33px / fontSizeDesktop)rem
+							margin-top 0
+							margin-bottom 0
+						p
+							font-size (13px / fontSizeDesktop)rem
+							margin-top (26px / fontSizeDesktop)rem
+							max-width (200px / fontSizeDesktop)rem
+							margin-bottom (47px / fontSizeDesktop)rem
+						a
+							font-size (12px / fontSizeDesktop)rem
+							text-decoration none
+							text-transform uppercase
+							i
+								margin-right (10px / fontSizeDesktop)rem
+			&__Gallery
+				margin-top (77px / fontSizeDesktop)rem
+				margin-bottom (83px / fontSizeDesktop)rem
+				text-transform uppercase
+				text-align center
+				p
+					font-size (12px / fontSizeDesktop)rem
+					text-transform uppercase
+					color $colourBlackLevel3
+					margin-bottom (14px / fontSizeDesktop)rem
+				h3
+					font-size (35px / fontSizeDesktop)rem
+					text-transform uppercase
+					font-weight normal
+					margin-bottom (71px / fontSizeDesktop)rem
+				&__Photos
+					width (565px / fontSizeDesktop)rem
+					margin-left auto
+					margin-right auto
+					li
+						list-style none
+						display inline-block
+			&__Subscribe
+				text-align center
+				p
+					font-size (12px / fontSizeDesktop)rem
+					text-transform uppercase
+					color $colourBlackLevel3
+					margin-bottom (14px / fontSizeDesktop)rem
+				h3
+					font-size (35px / fontSizeDesktop)rem
+					margin-bottom (10px / fontSizeDesktop)rem
+					text-transform uppercase
+					font-weight normal
+				span
+					display block
+					margin-bottom (24px / fontSizeDesktop)rem
+					font-size (14px / fontSizeDesktop)rem
+				form
+					margin-bottom (100px / fontSizeDesktop)rem
+					div
+						width (548px / fontSizeDesktop)rem
+						position relative
+						margin-left auto 
+						margin-right auto
+						input[type=text]
+							width (548px / fontSizeDesktop)rem
+							padding (14px / fontSizeDesktop)rem (17px / fontSizeDesktop)rem (14px / fontSizeDesktop)rem (17px / fontSizeDesktop)rem
+							border 1px solid colorGrayLevel1
+							font-style italic
+						button
+							position absolute
+							left (550px / fontSizeDesktop)rem !important
+							top 10px
+							z-index 15000
+							background none
+							border none
+							padding-top 8px
+		&__Footer
+			font-size (12px / fontSizeDesktop)rem
+			font-weight bold
+			color colourBlackLevel1
+			text-transform uppercase
+			padding-top (47px / fontSizeDesktop)rem
+			padding-left (40px / fontSizeDesktop)rem
+			padding-right (40px / fontSizeDesktop)rem
+			&__Shadow
+				width 100%
+				height 9px
+				background-image: url('../../img/Pufi_shadow.jpg');
+				background-repeat: repeat-x;
+			&__Site
+				flex()
+				flexDirection(row)
+				article
+					width 20%
+					p
+						font-size (12px / fontSizeDesktop)rem
+					ul
+						border-right 1px solid colorGrayLevel2
+						width 80%
+						li
+							list-style none
+							margin-bottom (17px / fontSizeDesktop)rem
+							a
+								text-decoration none
+								color colourBlackLevel1
+				&__Legal
+					img
+						margin-top (50px / fontSizeDesktop)rem
+					&__Fiscal
+						margin-right (15px / fontSizeDesktop)rem
+				&__Social
+					ul
+						border-right 0px !important
+						li
+							list-style none
+							display inline-block
+							margin-right (8px / fontSizeDesktop)rem
+							i 
+								font-size (20px / fontSizeDesktop)rem
+			&__Brandlive
+				border-top 1px solid lightgray
+				padding-top 14px
+				padding-bottom 14px
+				flex()
+				spaceBetween()
+				margin-top (50px / fontSizeDesktop)rem
+				p
+					font-size (11px / fontSizeDesktop)rem
+					color colorGrayLevel3
+
+/**
+*
+* #.# Reusable items
+*
+*/
+.Pufi__Button
+	color white
+	display block
+	border 2px solid white
+	padding (18px / fontSizeDesktop)rem (34px / fontSizeDesktop)rem (18px / fontSizeDesktop)rem  (34px / fontSizeDesktop)rem
+	position absolute
+	top 42%
+	left 50%
+	transform translateY(-42%)
+	transform translateX(-50%)
+	text-align center
+	text-decoration none
+
+.Pufi__invalidMsg
+	visibility hidden
+	font-size (21px / fontSizeDesktop)rem
+	margin-top 20px
+	color red
+
+.Pufi__Background__Sticky
+	background-color colourGreyLight !important
